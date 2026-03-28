@@ -1,0 +1,95 @@
+baseURL = "https://mynewsblog.com/"
+languageCode = "en-us"
+title = "My News Blog"
+theme = "PaperMod"
+
+[params]
+  env = "production"
+  title = "My News Blog"
+  description = "Breaking news, sharp analysis, no fluff."
+  keywords = ["news", "analysis", "technology", "world"]
+  author = "Paul"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowToc = true
+  TocOpen = false
+  comments = false
+
+[params.assets]
+  favicon = "/favicon.ico"
+
+[params.cover]
+  hidden = false
+  hiddenInList = false
+  hiddenInSingle = false
+
+[params.label]
+  text = "My News Blog"
+
+[params.homeInfoParams]
+  Title = "My News Blog 📰"
+  Content = "Breaking news, sharp analysis, no fluff."
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/"
+
+[[params.socialIcons]]
+  name = "twitter"
+  url = "https://x.com/"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "tech"
+    name = "Tech"
+    url = "/categories/tech/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "world"
+    name = "World"
+    url = "/categories/world/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "business"
+    name = "Business"
+    url = "/categories/business/"
+    weight = 4
+
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 5
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 6
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = "monokai"
+
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

@@ -1,0 +1,40 @@
+{{ define "main" }}
+<style>
+  .news-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+  }
+  .news-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+  }
+  .news-hero p {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    max-width: 600px;
+  }
+  .news-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+</style>
+
+<div class="news-hero">
+  <h1>📰 My News Blog</h1>
+  <p>Breaking news, sharp analysis, no fluff. Covering technology, business, and the forces shaping our world.</p>
+  <div class="news-stats">
+    <span>📝 {{ len .Site.RegularPages }} Articles</span>
+    <span>🏷️ {{ len .Site.Taxonomies.categories }} Categories</span>
+    <span>📅 Updated {{ now.Format "Jan 2, 2006" }}</span>
+  </div>
+</div>
+
+{{ .Content }}
+{{ end }}
